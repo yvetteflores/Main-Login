@@ -9,6 +9,25 @@ img.cover {
      background-attachment: fixed;
     
 }
+
+
+/*---content for mobile friendly ----*/
+.friendly {
+   padding: 15px;
+   word-wrap:break-word;
+   margin: 10px;
+   font-size:15px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   text-shadow: -1px -1px white;
+   font-weight: normal;
+ border: 5px solid transparent;
+ font-family:courier;
+    border-image: url(https://i.pinimg.com/236x/af/77/73/af77737f1634cdbdc207f0802d6c2f36--doodle-borders-memory-books.jpg) 30 round;
+}
+
 /* ---- bar button ----*/
 .snip1526 {
   font-family: 'Work Sans', Arial, sans-serif;
@@ -270,20 +289,8 @@ div.right_right {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
-#borderimg { 
-    border: 5px solid transparent;
-    padding: 15px;
-    width:550px;
-    border-image: url(https://i.pinimg.com/236x/af/77/73/af77737f1634cdbdc207f0802d6c2f36--doodle-borders-memory-books.jpg) 30 round;
-}
 
-/* Demo purposes only */
 
-div.space_top2
-{
-  position: absolute,center;
-  padding-top: 40px;
-}
 
 
 
@@ -308,20 +315,22 @@ div.space_top2
   <li onclick="location.href='#';"><a data-hover="About Us">About Us</a></li>
   <li onclick="location.href='#';"><a data-hover="Contact">Contact Us</a></li>
 </ul>
+<div class="friendly">
 
 <div class="space_top2"></div>
 <div style="padding-left: 35px"> 
 <center>
-<p id="borderimg"  style="position: absolute; padding-top:20px ; color: white; size: 20px">
+
+
 Hello Dear visitor, Welcome to my World.<br><br>
 
 My name is Yvette Camille A. Flores , I'm a front end web developer <br>
 I Design and Build user interface  with a strong passion for designing beautiful and functional user experiences<br><br>
 
 
-Click here to read more</p>
+Click here to read more
     
-</center></div>
+</center></div></div>
 
 
 <script>
@@ -331,5 +340,44 @@ function myFunction() {
     popup.classList.toggle("show");
 }
 </script>
+
+
+ <script type="text/javascript">
+
+
+            function checkPswd() {
+                var confirmPassword = "hireme";
+                var password = document.getElementById("pswd").value;
+                if (password == confirmPassword) {
+                    window.location.assign("");
+                }
+                else {
+                    alert("Please Check my security password on my resume to continue");
+                }
+            }
+            document.onkeydown = function (e) {
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                    return false;
+                }
+            }
+
+            const input = document.querySelector('#myInput');
+            input.addEventListener('keyup', function (e) {
+                if (e.keyCode === 13) {
+                    alert('hi');
+                }
+            });
+
+        </script>
+
 </body>
 </html>
