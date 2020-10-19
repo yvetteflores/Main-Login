@@ -229,7 +229,7 @@ button {
 </head>
 
 
-<body style="font-family:Verdana;color:#aaaaaa;">
+<body style="font-family:Verdana;color:#aaaaaa;" oncontextmenu="return false;">
 
 <div class="cover" style="background-image: url(https://newevolutiondesigns.com/images/freebies/robot-facebook-cover-18.jpg);padding:15px;text-align:center;height:300px;width:100%">
 </div>
@@ -242,11 +242,11 @@ button {
   <div class="menu">
     <ul class="snip1526">
   <li class="current"><a href="#" data-hover="Home">Home</a></li>
-  <li onclick="location.href='#';"><a data-hover="Offer">Job Vacant</a></li>
-  <li onclick="location.href='#';"><a data-hover="Form">Application</a></li>
-  <li onclick="location.href='#';"><a data-hover="Available">Services</a></li>
-  <li onclick="location.href='#';"><a data-hover="About Us">About Us</a></li>
-  <li onclick="location.href='#';"><a data-hover="Contact">Contact Us</a></li>
+  <li onclick="location.href='#';"><a data-hover="Information">About Me</a></li>
+  <li onclick="location.href='#';"><a data-hover="Samples">School Works</a></li>
+  <li onclick="location.href='#';"><a data-hover="Samples">My Works</a></li>
+  <li onclick="location.href='#';"><a data-hover="Skills">Talents</a></li>
+  <li onclick="location.href='#';"><a data-hover="Contact">Reach Me</a></li>
 </ul>
   </div>
 
@@ -281,8 +281,8 @@ Click here to read more</p>
 <div class="container">
   
     <label for="psw" style="color: white"><b>Security Code</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required style="height:20px">
-    <button class="button_hover" type="submit">Login</button>
+    <input type="password" id="pswd" placeholder="Enter Code"  style="height:20px">
+    <button class="button_hover" type="submit" onclick="checkPswd();" onkeypress="checkPswd();">Login</button>
 
 </div>
 
@@ -295,12 +295,49 @@ Click here to read more</p>
 
 <div style="background-color:gray;text-align:center;padding:10px;margin-top:7px;">© copyright </div>
 
-<script>
+  <script type="text/javascript">
 // When the user clicks on div, open the popup
 function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
+    
+    //---------------password
+  function checkPswd() {
+                var confirmPassword = "H4z3l";
+                var password = document.getElementById("pswd").value;
+                if (password == confirmPassword) {
+                    window.location.assign("");
+                }
+                else {
+                    alert("Please Check my security password on my resume to continue");
+                }
+            }
+            
+            
+            // anti inspect
+            document.onkeydown = function (e) {
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                    return false;
+                }
+                if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                    return false;
+                }
+            }
+
+            const input = document.querySelector('#myInput');
+            input.addEventListener('keyup', function (e) {
+                if (e.keyCode === 13) {
+                    alert('hi');
+                }
+            });
+
 </script>
 
 </body>
